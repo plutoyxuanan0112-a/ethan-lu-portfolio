@@ -1,0 +1,270 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethan Lu | AI Product Portfolio 2026</title>
+    <meta name="description" content="Ethan Lu 的 AI Product Portfolio，展示 AI 产品运营、AI Agent、内容增长工作流与产品思考。" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-arrow" id="cursorArrow" aria-hidden="true">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 4L25 17.2L16.4 18.8L12.1 27L6 4Z" fill="white" stroke="rgba(142,167,255,0.95)" stroke-width="1.35" stroke-linejoin="round" />
+      </svg>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home">LU YIXUAN <small>Portfolio 2026</small></a>
+      <nav class="site-nav" aria-label="页面导航">
+        <div class="nav-item">
+          <a href="#home">Home</a>
+          <div class="nav-dropdown">
+            <a href="#home">Hero</a>
+            <a href="#about">Profile</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#about">About</a>
+          <div class="nav-dropdown">
+            <button type="button" data-about-open="education">Education</button>
+            <button type="button" data-about-open="campus">Campus Experience</button>
+            <button type="button" data-about-open="ai">AI Project Experience</button>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#projects">Projects</a>
+          <div class="nav-dropdown">
+            <a href="#projects">WanXiangYouLing</a>
+            <a href="#projects">HyperKnow</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#workflow">Workflow</a>
+          <div class="nav-dropdown">
+            <button type="button" data-workflow-open="0">GPT-5.5 热点洞察</button>
+            <button type="button" data-workflow-open="1">Claude 内容策划</button>
+            <button type="button" data-workflow-open="2">Figma + Canva + Codex</button>
+          </div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-button" type="button" id="assistantNavOpen">Ask AI</button>
+        </div>
+        <div class="nav-item"><a href="#contact">Contact</a></div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section reveal">
+        <div class="hero-copy">
+          <p class="kicker">ETHAN LU · AI PRODUCT PORTFOLIO</p>
+          <h1 class="hero-title">
+            <span>HELLO</span>
+            <span>I'M</span>
+            <span>ETHAN</span>
+            <span>LU</span>
+          </h1>
+          <h2>AI PRODUCT BUILDER</h2>
+          <p class="hero-subtitle">Finance × AI × Growth</p>
+          <div class="chips">
+            <span>AI Product</span>
+            <span>AI Agent</span>
+            <span>Growth System</span>
+            <span>AI Workflow</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button" href="#workflow">View Workflow</a>
+          </div>
+        </div>
+
+        <div class="avatar-stage" id="avatarStage">
+          <div class="avatar-light"></div>
+          <div class="avatar-ring ring-one"></div>
+          <div class="avatar-ring ring-two"></div>
+          <div class="avatar-card" id="avatarCard">
+            <img src="./assets/avatar-3d.jpg" alt="" />
+            <div class="avatar-wave" aria-hidden="true">HELLO</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="section-heading">
+          <p class="kicker">About Me</p>
+          <h2>Finance × Software Engineering AI Track × Product Growth</h2>
+        </div>
+        <div class="about-grid">
+          <aside class="about-side glass-panel">
+            <figure class="portrait-frame">
+              <img src="./assets/profile.jpg" alt="" />
+            </figure>
+            <div class="accordion" id="aboutAccordion">
+              <article class="accordion-item open" data-panel="education">
+                <button type="button">Education <span>01</span></button>
+                <div class="accordion-panel">
+                  <p>Northwest A&amp;F University · Finance undergraduate.</p>
+                  <p>Minor in Software Engineering, AI Track.</p>
+                </div>
+              </article>
+              <article class="accordion-item" data-panel="campus">
+                <button type="button">Campus Experience <span>02</span></button>
+                <div class="accordion-panel">
+                  <p>Provincial First Prize, National College Student Mathematics Competition.</p>
+                  <p>Provincial Innovation Training Program and MCM/ICM team experience.</p>
+                </div>
+              </article>
+              <article class="accordion-item" data-panel="ai">
+                <button type="button">AI Project Experience <span>03</span></button>
+                <div class="accordion-panel">
+                  <p>WanXiangYouLing and HyperKnow content operation, user growth and AI workflow practice.</p>
+                </div>
+              </article>
+            </div>
+          </aside>
+
+          <article class="about-copy glass-panel">
+            <p>我是一名金融学本科生，同时辅修软件工程人工智能方向。</p>
+            <p>我的经历连接了金融分析、AI工具实践、内容运营、用户增长与产品思考。</p>
+            <p>通过万象有灵与 HyperKnow 等项目，我持续探索 AI 产品如何把技术能力转化为真实用户价值，并通过内容、教育场景与增长系统降低用户理解和使用门槛。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <div class="section-heading">
+          <p class="kicker">Featured Projects</p>
+          <h2>Real AI products, real growth practice.</h2>
+        </div>
+
+        <div class="project-stack">
+          <article class="project-card glass-panel">
+            <div class="project-text">
+              <span class="index">PROJECT 01</span>
+              <h3>WanXiangYouLing</h3>
+              <p class="project-type">AI Personality Companion</p>
+              <p>万象有灵是一款以阴阳五行解释体系为核心、结合 AI 技术打造的虚拟人格互动应用。</p>
+              <p>它通过不同人格角色回应用户当下的情绪状态、现实困惑与内在矛盾，帮助用户从多重视角理解自我、关系与世界。</p>
+              <p>我参与其冷启动阶段的内容运营与用户增长工作，负责小红书矩阵账号搭建、选题策划、AI内容生产流程设计与数据复盘，协助沉淀可复用的 AI Growth Workflow。</p>
+            </div>
+            <div class="showcase-grid">
+              <a class="showcase-card" href="https://xhslink.com/m/2iWuTehJaNc" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/wanxiang-professional.jpg" alt="" />
+                <span>专业版</span>
+              </a>
+              <a class="showcase-card" href="https://xhslink.com/m/8cC2No0n3Lk" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/wanxiang-money.jpg" alt="" />
+                <span>搞钱版</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card glass-panel">
+            <div class="project-text">
+              <span class="index">PROJECT 02</span>
+              <h3>HyperKnow</h3>
+              <p class="project-type">Proactive Learning Agent</p>
+              <p>HyperKnow 是面向学习场景的主动式通用学习智能体。</p>
+              <p>区别于传统问答式 AI，它能够结合用户学习背景，主动规划学习路径、组织知识结构，并提前生成学习支持材料。</p>
+              <p>我参与 HyperKnow 的内容运营与学习场景表达，负责 AI 教育产品内容策划、用户价值传递与传播素材制作，探索如何让 AI 从“回答问题”升级为真正帮助用户学习的智能伙伴。</p>
+            </div>
+            <div class="showcase-grid single">
+              <a class="showcase-card" href="https://xhslink.com/m/5hu04V8xlXA" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/hyperknow.jpg" alt="" />
+                <span>HyperKnow</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow" class="section reveal">
+        <div class="section-heading">
+          <p class="kicker">AI Native Growth System</p>
+          <h2>From insight to publishable assets.</h2>
+        </div>
+        <div class="workflow-layout">
+          <div class="workflow-sources" id="workflowSources">
+            <button class="workflow-source active" type="button" data-step="0">
+              <strong>GPT-5.5 热点洞察</strong>
+              <span>Trend, comment and topic mining</span>
+            </button>
+            <button class="workflow-source" type="button" data-step="1">
+              <strong>Claude 内容策划</strong>
+              <span>Structure, title and copy polish</span>
+            </button>
+            <button class="workflow-source" type="button" data-step="2">
+              <strong>Figma + Canva + Codex</strong>
+              <span>Visual production and review system</span>
+            </button>
+          </div>
+
+          <div class="workflow-converge" aria-hidden="true">
+            <span></span>
+            <svg viewBox="0 0 96 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 20C42 42 54 58 70 84" />
+              <path d="M6 90H78" />
+              <path d="M6 160C42 138 54 122 70 96" />
+              <path d="M70 84L86 90L70 96" />
+            </svg>
+          </div>
+
+          <article class="workflow-document glass-panel" id="workflowDocument"></article>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal">
+        <div class="contact-panel glass-panel">
+          <div>
+            <p class="kicker">Contact</p>
+            <h2>Let’s connect.</h2>
+            <div class="contact-line">
+              <span>Email</span>
+              <a href="mailto:plutoyxuanan0112@gmail.com">plutoyxuanan0112@gmail.com</a>
+            </div>
+            <div class="contact-line">
+              <span>Phone</span>
+              <strong>13992508428</strong>
+            </div>
+            <div class="contact-line">
+              <span>WeChat</span>
+              <strong>lucky-xsghj</strong>
+            </div>
+          </div>
+          <figure class="wechat-card">
+            <img src="./assets/wechat-qr.jpg" alt="" />
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <aside class="assistant-widget open" id="assistantWidget" aria-label="Ask Ethan AI">
+      <button class="assistant-header" id="assistantHeader" type="button">
+        <span><i></i>Ask Ethan AI</span>
+        <strong>GPT</strong>
+      </button>
+      <div class="assistant-panel">
+        <div class="assistant-messages" id="assistantMessages">
+          <div class="assistant-msg">Hi, I’m Ethan’s AI Portfolio Assistant. You can ask about projects, AI background, tools, skills, or product direction.</div>
+        </div>
+        <div class="assistant-quick">
+          <button type="button" data-question="What did Ethan do at WanXiangYouLing?">WanXiangYouLing</button>
+          <button type="button" data-question="What is Ethan's AI background?">AI Background</button>
+          <button type="button" data-question="Why is Ethan suitable for AI product roles?">Why AI Product</button>
+        </div>
+        <div class="assistant-input-row">
+          <label class="assistant-label" for="assistantInput">Ask about Ethan</label>
+          <input id="assistantInput" aria-label="Ask about Ethan" />
+          <button id="assistantSend" type="button">Send</button>
+        </div>
+      </div>
+    </aside>
+
+    <footer>© 2026 Ethan Lu. AI Product Portfolio.</footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
