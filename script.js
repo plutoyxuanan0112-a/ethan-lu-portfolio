@@ -151,6 +151,54 @@ document.querySelectorAll("[data-workflow-open]").forEach((button) => {
   });
 });
 
+const albumImages = [
+  "./assets/album-01.jpg",
+  "./assets/album-02.jpg",
+  "./assets/album-03.jpg",
+  "./assets/album-04.jpg",
+  "./assets/album-05.jpg",
+];
+
+const albumCards = [
+  document.querySelector(".album-card-left"),
+  document.querySelector(".album-card-active"),
+  document.querySelector(".album-card-right"),
+];
+
+const albumObjectPositions = {
+  "./assets/album-02.jpg": "center 18%",
+};
+const albumPrev = document.querySelector("#albumPrev");
+const albumNext = document.querySelector("#albumNext");
+let albumIndex = 0;
+
+function renderAlbum() {
+  if (albumCards.some((card) => !card)) return;
+  const total = albumImages.length;
+  const visibleImages = [
+    albumImages[(albumIndex - 1 + total) % total],
+    albumImages[albumIndex % total],
+    albumImages[(albumIndex + 1) % total],
+  ];
+  albumCards.forEach((card, index) => {
+    const src = visibleImages[index];
+    card.src = src;
+    card.style.objectPosition = albumObjectPositions[src] || "center center";
+  });
+}
+
+albumPrev?.addEventListener("click", () => {
+  albumIndex = (albumIndex - 1 + albumImages.length) % albumImages.length;
+  renderAlbum();
+});
+
+albumNext?.addEventListener("click", () => {
+  albumIndex = (albumIndex + 1) % albumImages.length;
+  renderAlbum();
+});
+
+renderAlbum();
+
 const assistantMessages = document.querySelector("#assistantMessages");
 const assistantInput = document.querySelector("#assistantInput");
 const assistantSend = document.querySelector("#assistantSend");
@@ -190,7 +238,7 @@ function answerQuestion(question) {
   const hit = assistantKnowledge.find((item) => item.keys.some((key) => clean.includes(key.toLowerCase())));
   return hit
     ? hit.answer
-    : "Ethan is an AI Product Builder focused on AI Agent, AI Education, AI Workflow and User Growth, with hands-on experience in WanXiangYouLing and HyperKnow.";
+    : "Ethan is an AI Product Explorer focused on AI Agent, AI Education, AI Workflow and User Growth, with hands-on experience in WanXiangYouLing and HyperKnow.";
 }
 
 function sendQuestion(question) {
